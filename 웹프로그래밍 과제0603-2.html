@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function load(selectedObj){
+	    var a = selectedObj.value;
+	    if(a == '네이버'){
+            var newWindow = window.open("http://www.naver.com/", "MsgWindow", "width=1000,height=500");
+	    }
+        else if(a == '구글'){
+            var newWindow2 = window.open("http://www.google.com/", "MsgWindow", "width=1000,height=500");
+        }
+        else if(a == '오라클'){
+            var newWindow3 = window.open("https://www.oracle.com/kr/index.html", "MsgWindow", "width=1000,height=500");
+        }
+    }
+</script>
+<body>
+    <h3>옵션 선택으로 사이트 접속</h3>
+    <p>옵션 선택 마다 새 윈도우에 접속합니다.</p>
+    <hr>
+
+    <p>접속할 사이트</p>
+    <select id="site" onchange="load(this)">
+        <option value="네이버" selected>네이버
+        <option value="구글">구글
+        <option value="오라클">오라클
+    </select>
+</body>
+</html>
